@@ -1,0 +1,27 @@
+{
+    "theme_color": "#000",
+    "background_color": "#ffffff1a",
+    "display": "browser",
+    "scope": "/",
+    "start_url": "/",
+    "name": "gelogga",
+    "short_name": "logga",
+    "description": "Audit logs on modern macOS",
+    "icons": [
+        {
+            "src": "assets/icon/192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icon/256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icon/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
