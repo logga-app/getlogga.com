@@ -6,7 +6,7 @@
     "start_url": "/",
     "name": "gelogga",
     "short_name": "logga",
-    "description": "Audit logs on modern macOS",
+    "description": "Collect audit and access logs with an ease on macOS. Native experience, powered by Endpoint Security. Save logs in json, auditd or custom log format",
     "icons": [
         {
             "src": "assets/icon/192x192.png",

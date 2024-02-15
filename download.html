@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5WGVNLL2');
+        </script>
+        <!-- End Google Tag Manager -->
+        <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-180x180.png" />
+        <title>Download logga - audit and access logs on macOS</title>
+        <meta property="og:title" content="Download logga - audit and access logs on macOS">
+        <meta name="description" content="Collect audit and access logs with an ease on macOS. Native experience, powered by Endpoint Security. Save logs in json, auditd or custom log format">
+        <meta property="og:description" content="Collect audit and access logs with an ease on macOS. Native experience, powered by Endpoint Security. Save logs in json, auditd or custom log format">
+        <meta property="og:image" content="assets/icon/256x256.png">
+        <meta property="og:image:alt" content="logga">
+        <meta property="og:image:width" content="256">
+        <meta property="og:image:height" content="256">
+        <meta name="twitter:card" content="summary">
+        <link rel="canonical" href="https://getlogga.com/download">
+        <meta name="keywords" content="audit log, access log, macOS, endpoint security, download">
+        <meta name="author" content="Peter Hasko-Nagy">
+        <meta name="roboots" content="index, archive, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta property="og:site_name" content="logga">
+        <meta name="twitter:site" content="@getlogga">
+        <meta name="twitter:creator" content="@getlogga">
+        <meta name="theme-color" content="#000000">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-43L53LES86"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-43L53LES86');
+        </script>
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/shades-of-purple.min.css">
+        <link rel="stylesheet" href="style/main-minified.css">
+    </head>
+    <body class="theme_blue">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WGVNLL2"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="assets/icon/128x128.png" alt="logga icon"/>
+                    logga
+                </a>
+                <ul class="nav d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#compliance">what</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#faq">why</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link icon-link icon-link-hover" href="https://docs.getlogga.com">
+                        docs
+                        <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container hero">
+            <div class="hero-box mb-5">
+                <div class="get-started badge rounded-pill border-primary text-bg-warning p-2 ps-3 pe-3 fs-6 mt-4">
+                    <span class="nav-link icon-link icon-link-hover">
+                      6 months free beta
+                    </span>
+                </div>
+                <h1 class="display-1">Try logga today</h1>
+                <p class="lead">Just one click, and audit logs become exciting again</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row p-3">
+                <div class="col download-brew text-center">
+                    <p class="fs-6 fw-semibold">Use Homebrew</p>
+                    <div class="badge bg-primary brew lh-base" data-command="brew tap logga-app/logga && brew install logga" tabindex="-1" onclick="copy(this)">
+                        brew install logga
+                        <i class="bi bi-copy ps-2"></i>
+                    </div>
+                    <p>or</p>
+                    <div class="badge bg-primary brew lh-base" data-command="brew tap logga-app/logga && brew install logga-daemon" tabindex="-1" onclick="copy(this)">
+                        brew install logga-daemon
+                        <i class="bi bi-copy ps-2"></i>
+                    </div>
+                    <p>or</p>
+                    <p class="fs-5 fw-semibold">
+                        <a class="nav-link icon-link icon-link-hover pt-2 pb-2" href="https://storage.getlogga.com/logga-client-latest.pkg">
+                            Download logga installer
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </p>
+                    <p class="fs-5 fw-semibold">
+                        <a class="nav-link icon-link icon-link-hover pt-2 pb-2" href="https://storage.getlogga.com/logga-daemon-latest.pkg">
+                            Download logga-daemon installer
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </p>
+                    <div class="get-started badge rounded-pill border-secondary text-bg-secondary p-2 ps-3 pe-3 fs-6 mt-4">
+                        <a href="https://docs.getlogga.com/usage/configuration.html" class="nav-link icon-link icon-link-hover">
+                          Let's get you started
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <nav class="navbar">
+                    <a class="navbar-brand">
+                    © 2023 Peter Hasko-Nagy. All rights reserved.
+                    </a>
+                    <ul class="nav d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./privacy.html">
+                        privacy
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./eula.html">
+                            eula
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:peter@getlogga.com">
+                        <i class="bi bi-envelope-fill"></i>
+                        mail
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://github.com/logga-app/logga-public">
+                        <i class="bi bi-github"></i>
+                        github
+                        </a>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script>
+        function copy(evt) {
+            navigator.clipboard.writeText(evt.dataset.command);
+            setTimeout(() => evt.blur(), 500);
+        }
+      </script>
+</html>

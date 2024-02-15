@@ -20,12 +20,24 @@
     <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-180x180.png" />
-    <title>Logga - audit logs on macOS</title>
-    <meta name="description" content="Audit logs on modern macOS">
-    <meta name="keywords" content="audit, log ,auditlog, apple, macOS, security, process">
-    <meta name="author" content="Peter Nagy">
+    <title>Logga - audit and access logs on macOS</title>
+    <meta property="og:title" content="Logga - audit and access logs on macOS">
+    <meta name="description" content="logga is your friendly neighbourhood Security Information and Event Management tool which collects audit and access logs with an ease on macOS. Native experience, powered by Endpoint Security. Save logs in json, auditd or custom log format and stay SOC2 Compilant.">
+    <meta property="og:description" content="logga is your friendly neighbourhood Security Information and Event Management tool which collects audit and access logs with an ease on macOS. Native experience, powered by Endpoint Security. Save logs in json, auditd or custom log format and stay SOC2 Compilant.">
+    <meta property="og:image" content="assets/icon/256x256.png">
+    <meta property="og:image:alt" content="logga">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://getlogga.com/">
+    <meta name="keywords" content="audit log, access log, macOS, endpoint security, soc2, soc2 compilant, mdm, mobile device management, seim">
+    <meta name="author" content="Peter Hasko-Nagy">
     <meta name="roboots" content="index, archive, follow">
     <meta name="googlebot" content="index, follow">
+    <meta property="og:site_name" content="logga">
+    <meta name="twitter:site" content="@getlogga">
+    <meta name="twitter:creator" content="@getlogga">
+    <meta name="theme-color" content="#000000">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-43L53LES86"></script>
@@ -38,12 +50,10 @@
     </script>
 
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@650&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/shades-of-purple.min.css">
+    <link rel="stylesheet" href="style/main-minified.css">
   </head>
   <body class="theme_blue">
     <!-- Google Tag Manager (noscript) -->
@@ -51,209 +61,391 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
-        <div class="container-fluid">
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="#info">WHAT</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#faq">WHY</a>
-                </li>
-              </ul>
+        <nav class="navbar">
+            <a class="navbar-brand" href="./index.html">
+              <img src="assets/icon/128x128.png" alt="logga icon"/>
+              logga
+            </a>
+            <ul class="nav d-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="#compliance">what</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">why</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./download.html">download</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link icon-link icon-link-hover" href="https://docs.getlogga.com">
+                  docs
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="container-fluid hero">
-            <div class="hero-box">
-                <h1>Audit logs on modern macOS?</h1>
-                <h2>Meet Logga</h2>
-                <p class="app-store-label">
-                    available soon in App store
-                    <br/>
-                    <img src="assets/images/apple-badge.svg"/>
-                </p>
+        <div class="container hero">
+            <div class="hero-box mb-7">
+                <h1 class="display-1 brand-name">logga <span class="badge white blue-bg rounded-pill">beta</span> </h1>
+                <h2 class="display-1">Audit logs on modern macOS</h2>
+                <p class="lead">Audit log collection made easy. Seamless as if it was made by Apple.</p>
+                <div class="get-started badge rounded-pill border-primary text-bg-warning p-2 ps-3 pe-3 fs-6 mt-4">
+                  <a href="./download.html" class="nav-link icon-link icon-link-hover">
+                    Download
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+                <br/>
+                <div class="get-started badge rounded-pill border-secondary text-bg-secondary p-2 ps-3 pe-3 fs-6 mt-4">
+                  <a href="https://docs.getlogga.com/usage/configuration.html" class="nav-link icon-link icon-link-hover">
+                    Let's get you started
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
             </div>
-            <div class="hero-picture">
-              <picture>
-                <source type="image/png" srcset="assets/images/landing@1x.png" media="(max-width: 1279px)">
-                <source type="image/png" srcset="assets/images/landing@2x.png" media="(min-width: 1280px)">
-                <img src="assets/images/landing@1x.png"/>
-              </picture>
-            </div>              
-        </div>
-      </div>
-      <div class="container-fluid boxes-container" id="info">
-        <div class="container boxes">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 g-lg-5">
-            <div class="col">
-              <div class="p-3 info-box">
-                <div class="title"><mark>Privacy first</mark></div>
-                Logga values your privacy: it <mark>doesn't</mark> collect/store user-related data or tap into any network traffic.
-              </div>
-            </div>
-            <div class="col">
-              <div class="p-3 info-box">
-                <div class="title"><mark>macOS native</mark></div>
-                Logga is a <a href="https://developer.apple.com/system-extensions/">System Extension</a> that runs in userspace. System Extensions are "drivers" or extensions to kernel functionality, replacing the legacy Kernel Extensions. By running in <mark>userspace</mark>, Logga promises not to compromise the <mark>security or stability</mark> of your macOS.
-              </div>
-            </div>
-            <div class="col">
-              <div class="p-3 info-box">
-                <div class="title"><mark>Endpoint Security</mark></div>
-                Logga produces (process) <mark>execution</mark> logs, permission/kext/file(descriptor) related events are not in scope. To achive this, Logga utilizes <a href="https://developer.apple.com/documentation/endpointsecurity">Endpoint Security</a> by hooking on process executions.  
-              </div>
-            </div>
-            <div class="col">
-              <div class="p-3 info-box">
-                <div class="title"><mark>Configurable</mark></div>
-                Logga lets you have <mark>granular</mark> control over log format & rotation rules.
-              </div>
-            </div>
-            <div class="col">
-              <div class="p-3 info-box">
-                <div class="title"><mark>Templatable</mark></div>
-                  Logga has a <mark>templating</mark> engine that lets you customize log lines to your fancy.
-              </div>
-            </div>
-            <div class="col">
-              <div class="p-3 info-box">
-                <div class="title"><mark>Resourceful</mark></div>
-                JSON and auditd log format out of the box.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container log-format-hero">
-          <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-json-tab" data-bs-toggle="pill" data-bs-target="#pills-json" type="button" role="tab" aria-controls="pills-json" aria-selected="true">JSON</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-auditd-tab" data-bs-toggle="pill" data-bs-target="#pills-auditd" type="button" role="tab" aria-controls="pills-auditd" aria-selected="false">auditd</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-custom-tab" data-bs-toggle="pill" data-bs-target="#pills-custom" type="button" role="tab" aria-controls="pills-custom" aria-selected="false">custom</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane show active" id="pills-json" role="tabpanel" aria-labelledby="pills-json-tab">
-              <div class="snippet">
-                <pre>
-                  <code>
-<span class="text-purple">{</span> <span class="text-yellow">"log"</span><span class="text-purple">: {</span> <span class="text-yellow">"args"</span><span class="text-purple">: [</span>"ls","-G","-la"<span class="text-purple">]</span>, <span class="text-yellow">"command"</span><span class="text-purple">:</span> "\/bin\/ls", <span class="text-yellow">"env"</span><span class="text-purple">:</span> <span class="text-purple">[</span>"..."<span class="text-purple">]</span>, <span class="text-yellow">"group"</span><span class="text-purple">:</span> "staff", <span class="text-yellow">"guid"</span><span class="text-purple">:</span> <span class="text-blue">20</span>, <span class="text-yellow">"pid"</span><span class="text-purple">:</span> <span class="text-blue">80918</span>, <span class="text-yellow">"ppid"</span><span class="text-purple">: [</span><span class="text-blue">80882</span><span class="text-purple">,</span><span class="text-blue">1541</span><span class="text-purple">,</span><span class="text-blue">1476</span><span class="text-purple">,</span><span class="text-blue">1</span><span class="text-purple">]</span>, <span class="text-yellow">"ruid"</span><span class="text-purple">:</span> <span class="text-blue">501</span>, <span class="text-yellow">"exit"</span><span class="text-purple">:</span> <span class="text-blue">0</span>, <span class="text-yellow">"username"</span><span class="text-purple">:</span> "timcook" <span class="text-purple">}</span>, <span class="text-yellow">"timestamp"</span><span class="text-purple">:</span> "1364481363" <span class="text-purple">}</span>
-<span class="text-purple">{</span> <span class="text-yellow">"log"</span><span class="text-purple">: {</span> <span class="text-yellow">"args"</span><span class="text-purple">: [</span>"date"<span class="text-purple">]</span>, <span class="text-yellow">"command"</span><span class="text-purple">:</span> "\/bin\/date", <span class="text-yellow">"env"</span><span class="text-purple">:</span> <span class="text-purple">[</span>"..."<span class="text-purple">]</span>, <span class="text-yellow">"group"</span><span class="text-purple">:</span> "staff", <span class="text-yellow">"guid"</span><span class="text-purple">:</span> <span class="text-blue">20</span>, <span class="text-yellow">"pid"</span><span class="text-purple">:</span> <span class="text-blue">80920</span>, <span class="text-yellow">"ppid"</span><span class="text-purple">: [</span><span class="text-blue">80890</span><span class="text-purple">,</span><span class="text-blue">1542</span><span class="text-purple">,</span><span class="text-blue">1480</span><span class="text-purple">,</span><span class="text-blue">1</span><span class="text-purple">]</span>, <span class="text-yellow">"ruid"</span><span class="text-purple">:</span> <span class="text-blue">501</span>, <span class="text-yellow">"exit"</span><span class="text-purple">:</span> <span class="text-blue">0</span>, <span class="text-yellow">"username"</span><span class="text-purple">:</span> "timcook" <span class="text-purple">}</span>, <span class="text-yellow">"timestamp"</span><span class="text-purple">:</span> "1364481383" <span class="text-purple">}</span>
-<span class="text-purple">{</span> <span class="text-yellow">"log"</span><span class="text-purple">: {</span> <span class="text-yellow">"args"</span><span class="text-purple">: [</span>"go","build","./cmd/$*"<span class="text-purple">]</span>, <span class="text-yellow">"command"</span><span class="text-purple">:</span> "\/usr\/local\/Cellar\/go\/1.18\/libexec\/bin\/go", <span class="text-yellow">"env"</span><span class="text-purple">:</span> <span class="text-purple">[</span>"..."<span class="text-purple">]</span>, <span class="text-yellow">"group"</span><span class="text-purple">:</span> "staff", <span class="text-yellow">"guid"</span><span class="text-purple">:</span> <span class="text-blue">20</span>, <span class="text-yellow">"pid"</span><span class="text-purple">:</span> <span class="text-blue">80919</span>, <span class="text-yellow">"ppid"</span><span class="text-purple">: [</span><span class="text-blue">80872</span><span class="text-purple">,</span><span class="text-blue">1541</span><span class="text-purple">,</span><span class="text-blue">1499</span><span class="text-purple">,</span><span class="text-blue">1</span><span class="text-purple">]</span>, <span class="text-yellow">"ruid"</span><span class="text-purple">:</span> <span class="text-blue">501</span>, <span class="text-yellow">"exit"</span><span class="text-purple">:</span> <span class="text-blue">0</span>, <span class="text-yellow">"username"</span><span class="text-purple">:</span> "timcook" <span class="text-purple">}</span>, <span class="text-yellow">"timestamp"</span><span class="text-purple">:</span> "1364481363" <span class="text-purple">}</span></code>
-                </pre>
-              </div>
-            </div>
-            <div class="tab-pane" id="pills-auditd" role="tabpanel" aria-labelledby="pills-auditd-tab">
-              <div class="snippet">
-                <pre>
-                  <code>
-type=EXECVE msg=audit<span class="text-purple">(</span><span class="text-blue">1648591393</span><span class="text-purple">):</span> exit=<span class="text-blue">0</span> argc=<span class="text-blue">3</span> a0=ls al=G a2=la ppid=<span class="text-blue">80882</span> pid=<span class="text-blue">80928</span> uid=<span class="text-blue">501</span> gid=<span class="text-blue">20</span> euid=<span class="text-blue">501</span> comm="ls" exe="/bin/ls"
-type=EXECVE msg=audit<span class="text-purple">(</span><span class="text-blue">1648591394</span><span class="text-purple">):</span> exit=<span class="text-blue">1</span> argc=<span class="text-blue">1</span> a0=cat ppid=<span class="text-blue">80888</span> pid=<span class="text-blue">80928</span> uid=<span class="text-blue">501</span> gid=<span class="text-blue">20</span> euid=<span class="text-blue">501</span> comm="cat" exe="/bin/cat"
-type=EXECVE msg=audit<span class="text-purple">(</span><span class="text-blue">1648591395</span><span class="text-purple">):</span> exit=<span class="text-blue">0</span> argc=<span class="text-blue">1</span> ppid=8078 pid=<span class="text-blue">80928</span> uid=<span class="text-blue">501</span> gid=<span class="text-blue">20</span> euid=<span class="text-blue">501</span> comm="date" exe="/bin/date"</code>
-                </pre>
-              </div>
-            </div>
-            <div class="tab-pane" id="pills-custom" role="tabpanel" aria-labelledby="pills-custom-tab">
-              <div class="snippet">
-                <pre>
-                  <code>
-<span class="text-green">// ${username} ${ruid} ${guid} arbitrary text ${command} ${args}"</span>
-<span class="text-blue">1648591395</span> timcook <span class="text-blue">501</span> <span class="text-blue">20</span> arbitrary text /bin/ls <span class="text-purple">[</span>"ls"<span class="text-purple">,</span>"-G"<span class="text-purple">,</span>"-la"<span class="text-purple">]</span>
-<span class="text-blue">1648591396</span> timcook <span class="text-blue">501</span> <span class="text-blue">20</span> arbitrary text /bin/rm <span class="text-purple">[</span>"rm"<span class="text-purple">,</span>"-rf"<span class="text-purple">,</span>"/Users/timcook/.oh-my-zsh/log/update.lock"<span class="text-purple">]</span></code>
-                </pre>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="container">
-        <div class="container-fluid faq" id="faq">
+        <div class="row">
+          <h3 class="display-6 section-title blue p-4 pt-3">Compliance</h3>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+          <div class="col">
+            <div class="tile purple-box text-white">
+              <div class="tile-content">
+                <h4 class="title">
+                  <i class="bi bi-shield-lock"></i>
+                  Access logs 
+                </h4>
+                <p class="pt-3 pb-3"><strong>SOC2</strong> Complience? We have you covered. logga collects a variety of authentication events, such as ssh, screen share, OpenDirectory login, and more. logga also gathers permission escalation events, like su and sudo executions.</p>
+              </div>
+              <div class="tile-body">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="tile blue-box text-white">
+              <div class="tile-content">
+                <h4 class="title">
+                  <i class="bi bi-list-check"></i>
+                  Audit logs
+                </h4>
+                <p class="pt-3 pb-3">Don't miss anything happening on macOS. Collect detailed process execution logs and forward them to your favourite logging backend. You choose the preferred log format and let logga do the rest.</p>
+              </div>
+              <div class="tile-body">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h3 class="display-6 section-title purple p-4 pt-6">Supported log formats</h3>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+          <div class="col">
+            <div class="tile">
+              <div class="tile-content">
+                <h4 class="purple title">json</h4>
+                <p>logga works best with JSON, the most popular logging format of the Cloud Native era.</p>
+                <p>
+                  Whether you are dealing with Audit or Access logs<sup>1</sup>, choosing JSON format gives you the most insight into the collected events <sup>2</sup>.
+                </p>
+                <p>
+                  JSON is a great choice if your organization has established logging practices & infrastructure. Find out more in the <a href="https://docs.getlogga.com/blocks/audit/json.html" target="_blank">documentation</a>.
+                </p>
+                <p class="small text-gray"><sup>1</sup>Although you can choose from multiple formats for audit logs, access logs currently only support JSON formatting.</p>
+                <p class="small text-gray"><sup>2</sup>JSON has a higher level of expressivity compared to the strict auditd format or the custom log format</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="tile">
+              <div class="tile-body">
+<pre>
+  <code class="language-json rounded">
+  {
+    "log": {
+      "args": [
+        "date",
+        "+%s"
+      ],
+      "audit_token": {
+        "auid": 501,
+        "egid": 20,
+        "euid": 501,
+        "gid": 20,
+        "group": "staff",
+        "pid": 43278,
+        "uid": 501,
+        "username": "administrator"
+      },
+      "command": "/bin/date",
+      "env": ["SHELL=\/bin\/zsh"],
+      "parent_audit_token": { ... },
+      "responsible_audit_token": { ... },
+      "tty": "/dev/ttys001"
+    },
+    "timestamp": "2023-09-17T21:32:56.695Z"
+  }
+  </code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="tile">
+              <div class="tile-content">
+                <h4 class="purple title">auditd</h4>
+                <p>
+                  The `auditd` formatter tries to follow the <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-understanding_audit_log_files">specification</a> of the linux counterpart. Due to platform differences, logga's auditd formatter is not 100% compatible with, but pretty usable by ausearch.
+                  <br/>
+                  It is a good choice when your organization already collects Linux audit logs and doesn't want to mix formats.
+                </p>
+              </div>
+              <div class="tile-body">
+<pre>
+  <code class="language-json float-right">
+  type=EXECVE msg=audit(1700003649:56): \
+    argc=3 a0=sh a1=-c \
+    a2=ioreg -c IOHIDSystem | awk '/HIDIdleTime/ {print $NF; exit}'
+  type=SYSCALL msg=audit(1700003649:56): \
+    arch=c000003e syscall=59 success=yes exit=0 \
+    a0=sh a1=-c \
+    a2=ioreg -c IOHIDSystem | awk '/HIDIdleTime/ {print $NF; exit}' \
+    items=1 ppid=571 pid=47410 \
+    auid=501 uid=501 gid=20 euid=501 egid=20 \
+    tty= ses=1 comm=sh exe=/bin/bash key="logga"
+  </code>
+</pre>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="tile">
+              <div class="tile-content">
+                <h4 class="purple title">custom</h4>
+                <p>
+                  The audit logger supports custom log formatting. The field names are fixed, but other than that, you can go crazy with your own format.
+                </p> 
+                <p>
+                  Available fields: 
+                  <br/>
+                  timestamp, username, group, uid, guid, auid, euid, egid, pid, ppid, tty, exec_path, script, cwd, command, env, args
+                </p>
+                <p>Find out more in the <a href="https://docs.getlogga.com/blocks/audit/custom.html" target="_blank">documentation</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="compliance">
+          <h3 class="display-6 section-title red p-4 pt-6">Want to hear more?</h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 p-3">
+          <div class="col info-box p-3">
+            <i class="bi bi-shield-lock-fill"></i>
+            <h3 class="inline">Privacy first.</h3>
+            <p class="inline">We value your privacy: By default, logga <strong>doesn't</strong> collect or store customer data. On top of that, logga doesn't make any network requests. (After the beta period, the only network communication will be with the license server).</p>
+          </div>
+          <div class="col info-box  p-3">
+            <i class="bi bi-feather"></i>
+            <h3 class="inline">Efficient.</h3>
+            <p class="inline">logga is a native macOS application using minimal system resources. Without the accompanying menu bar application, it takes up even less! Based on our measurements, even at a very high volume of system events, logga doesn't significantly affect battery life.</p>
+            <!--logga is a <a href="https://developer.apple.com/system-extensions/">System Extension</a> that runs in userspace. System Extensions are "drivers" or extensions to kernel functionality, replacing the legacy Kernel Extensions. By running in <mark>userspace</mark>, Logga promises not to compromise the <mark>security or stability</mark> of your macOS.-->
+          </div>
+          <div class="col info-box  p-3">
+            <i class="bi bi-gear-wide-connected"></i>
+            <h3 class="inline">Flexible.</h3>
+            <!--Logga produces (process) <mark>execution</mark> logs, permission/kext/file(descriptor) related events are not in scope. To achive this, Logga utilizes <a href="https://developer.apple.com/documentation/endpointsecurity">Endpoint Security</a> by hooking on process executions.  -->
+            <p class="inline">logga is incredibly easy to install: manually by Installer, by script, or via brew. logga is developer first: it is fully manageable via CLI. If you are a visual type, the UI has you covered.</p>
+          </div>
+          <div class="col info-box  p-3">
+            <i class="bi bi-buildings-fill"></i>
+            <h3 class="inline">Enterprise ready.</h3>
+            <p class="inline">logga works well with MDM: you can set up audit logging hands-free (without physical access to the macOS machine). Refer to the documentation to see the <a href="https://docs.getlogga.com/blocks/fda.html#with-mdm" target="_blank">details</a>.</p>
+          </div>
+          <div class="col info-box  p-3">
+            <i class="bi bi-sliders2"></i>
+            <h3 class="inline">Configurable.</h3>
+            <p class="inline">logga has a dead simple, developer and automation-friendly configuration. It has sensible defaults and lets you have granular control over log format, rotation rules, and process muting.</p>
+          </div>
+          <div class="col info-box  p-3">
+            <i class="bi bi-box-seam-fill"></i>
+            <h3 class="inline">Resourceful</h3>
+            <p class="inline">logga supports JSON and auditd log formats out of the box. If you have something else in mind, the custom log format lets you go crazy with your preferred formatting.</p>
+          </div>
+        </div>
+        <div class="row">
+          <h3 class="display-6 section-title p-4 pt-6">Coming later <span class="badge white blue-bg rounded-pill">2024</span></h3>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+          <div class="col-lg-7">
+            <div class="tile">
+              <div class="tile-content">
+                <h4 class="blue title">Visualizing access log history and making it searchable</h4>
+                <p>
+                  By providing an SSO protected dashboard. Check who had access to your machines at a glance. Manage your team and billing.
+                </p>
+              </div>
+              <div class="tile-body">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="tile">
+              <div class="tile-content">
+                <h4 class="blue title">And more</h4>
+                <p>Self host. Backup to S3. Forward logs without 3rd parties.</p>
+              </div>
+              <div class="tile-body">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="tile">
+              <div class="tile-content">
+                <h4 class="blue title">Smart notifications on selected events</h4>
+                <p>
+                  Would you like to be notified if someone connects to your nodes via SSH? Do you want an email or Slack message on each VNC event? We got you covered.
+                </p>
+              </div>
+              <div class="tile-body">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h3 class="display-6 section-title p-4 pt-6">In case you still have questions</h3>
+        </div>
+        <div class="row" id="faq">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingZero">
+              <h4 class="accordion-header" id="headingZero">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseOne">
-                  <div class="diagonal-lines"><mark>Why would I need Logga?</mark></div>
+                  <div>Why would I need Logga?</div>
                 </button>
-              </h2>
+              </h4>
               <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Audit logging is a bit of a mess right now on macOS. <mark class="black">OpenBSM</mark> is slowly being deprecated since Big Sur, to pave the way for <mark class="black">Endpoint Security</mark>. Endpoint Security is far from being feature complete but already provides enough functionality to be able to watch & record running processes. If for some reason<sup>1</sup> you or your company needs to collect logs about who/what runs processes on your Mac, you might find Logga useful.  
-                  <br/>
-                  <br/>
-                  <sup>1</sup>for example SOC2 compliance
+                  <p>
+                    We try to make audit log collection easy on modern macOS. Our goal is to make logga as seamless as if it would be a built-in macOS application.
+                  </p>
+                  <p>
+                    We believe logga is the best for companies or individuals who:
+                    <ul>
+                      <li>doesn't necessarily have big budget (or need) for complex security tools</li>
+                      <li>wants to be SOC2 compliant</li>
+                      <li>already have established audit logging practices on different platforms, and want to standardize the format across them</li>
+                    </ul>
+                  </p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <div class="diagonal-lines"><mark>How does Logga work?</mark></div>
+              <h4 class="accordion-header" id="headingComparison">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComparison" aria-expanded="true" aria-controls="collapseComparison">
+                  <div class="diagonal-lines">How does logga compare to other solutions?</div>
                 </button>
-              </h2>
+              </h4>
+              <div id="collapseComparison" class="accordion-collapse collapse" aria-labelledby="headingComparison" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h5>Crowdstrike</h5>
+                    <p>While <a href="https://www.crowdstrike.com/" target="_blank">Crowdstrike</a> has undeniably amazing features, we could not find audit logging capabilities during our market research. They seem to collect access logs by parsing the Apple Unified Log store, which is inferior to logga's capabilities.</p>
+                    <h5>osquery</h5>
+                    <p><a href="https://osquery.io/">osquery</a> seem to offer near-realtime process auditing capabilities. The documentation is a bit lacking, but based on the information osquery doesn't collect access logs. osquery organizes data into SQL tables, while logga supports multiple log formats.</p>
+                    <h5>Filebeat for macOS</h5>
+                    <p><a href="https://www.elastic.co/beats/filebeat" target="_blank">Filebeat</a> is a capable logga competitor. What logga can offer that Filebeat doesn't, is more agility from developers, better UX, more focused feature set, multiple log formats, better CLI support, better MDM support and long-term vision. logga is shaped by customer feedback and evolves faster than the Elastic offering.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <div class="diagonal-lines">Can I find logga on the App Store?</div>
+                </button>
+              </h4>
               <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Logga is a <mark class="black">System Extension</mark>, that runs in the background as a userspace daemon. For this application type, Apple requires an accompanying macOS <mark class="black">GUI</mark> application that enables the user to load, unload & remove the System Extension intuitively(?). The GUI application also makes it easier to package, sign<sup>1</sup> and distribute the application via App Store.
-                  <br/> 
-                  Logga hooks on Endpoint Security <mark class="black">"exec"</mark> events, then writes the event & meta information to log files. Logga takes care of <mark class="black">log rotation</mark> as well.
-                  <br/>
-                  <br/>
-                  <sup>1</sup>extend with special privileges to be able to access process information
+                  <p>
+                    Sorry, but no. logga is a special <a href="https://developer.apple.com/system-extensions/" target="_blank">system extension</a>, which Apple doesn't support uploading to the App Store just yet.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <div class="diagonal-lines"><mark>What if I manage hundreds / thousand of Macs? Can I install Logga some other way than via App Store?</mark></div>
+              <h4 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <div class="diagonal-lines">How does Logga work?</div>
                 </button>
-              </h2>
+              </h4>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Currently no. I know what needs to be done to support this use case, but it requires (a lot) more work, and Apple doesn't make things easier. I needed to keep the scope relatively small for the launch. If you are interested in this use case, please open an issue on <a href="https://github.com/logga-app/logga-public/issues/new">Github</a>.
-                  <br/>
-                  <br/>
-                  (Please note that for this to work at scale, your organization will probably need <a href="https://support.apple.com/guide/deployment/intro-to-mdm-profiles-depc0aadd3fe/web">MDM</a>)
+                  <h5 class="inline">logga</h5> 
+                  <p class="inline">
+                    is a <a href="https://developer.apple.com/system-extensions/" target="_blank">system extension</a> application that you install as any other traditional GUI app. In order to load the extension part which collects the logs (via the logga app), you will need to manually grant Full Disk Access and approve running the binary. To avoid manual interactions, logga will be mostly handy for those who use MDM for fleet management. With the proper <a href="https://it-training.apple.com/tutorials/deployment/dm005" target="_blank">MDM</a> configuration, running the logga application is seamless and can be easily integrated into the IT management workflow.
+                  </p>
+                  <p></p>
+                  <h5 class="inline">logga-daemon</h5>
+                  <p class="inline">
+                    is a single binary (packaged as a macOS application for code signing & distribution). With logga daemon comes a <a href="https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html" target="_blank">LaunchDaemon</a>, wwhich ensures that the binary always runs. It is in featue parity with the regular logga application, just the deployment method differs.
+                  </p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
+              <h4 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <div class="diagonal-lines"><mark>How much will Logga cost once released?</mark></div>
+                  <div class="diagonal-lines">What if I manage hundreds (or more) Macs?</div>
                 </button>
-              </h2>
+              </h4>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Good question. I have a strong desire to sell Logga as a <mark class="black">"buy once, use forever"</mark> application instead of a subscription service. How will I earn millions, you might ask? Probably I won't, so let's say <mark class="black">$5</mark>. Do you think this is too much? Or too little? Please don't hesitate to drop me an email!
-                  <br/>
-                  <br/>
-                  Although, If there will ever be an Enterprise<sup>1</sup> version of Logga, it will probably be a <mark class="black">subscription</mark> service. The use case would require custom distribution, billing + <mark class="black">maintenance</mark>, which has recurring costs. Regardless, I intend to keep the price low.
-                  <br/>
-                  <br/>
-                  <sup>1</sup>Lets you install it on hundreds or thousands of Macs without the App Store
+                  <p>
+                    logga offers CLI functionality to support automatic deployment. In order to be able to install logga at scale in a fully automated manner, you will need <a href="https://it-training.apple.com/tutorials/deployment/dm005" target="_blank">MDM</a>.
+                  </p>
+                  <p>The reason: logga (all <a href="https://developer.apple.com/system-extensions/" target="_blank">system extensions</a>) needs Full Disk Access in order to be able to  operate. Authorizing the FDA for an application is a manual process unless MDM is at play. This is an Apple side security requirement.</p>
+                  <p>If you are an organization with a large macOS fleet, feel free to <a href="mailto:peter@getlogga.com">contact us</a> with questions. We are happy to help!</p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
+              <h4 class="accordion-header" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <div class="diagonal-lines"><mark>Will there be a public roadmap?</mark></div>
+                  <div class="diagonal-lines">How much will logga cost after beta?</div>
                 </button>
-              </h2>
+              </h4>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Yes, on <a target="_blank" href="https://github.com/logga-app/logga-public">Github</a>! Feel free to suggest additional features or report bugs.
+                  <p>Altough logga will be free during beta, it cannot stay free forever. We haven't figured out pricing & plans just yet, but imagine something like this:</p>
+                  <ul>
+                    <li>We plan to have a free version with limited feature set</li>
+                    <li><b>Schools and Open Source</b>: Send us an <a href="mailto:peter@getlogga.com">email</a>, we will figure it out</li>
+                    <li><b>Commercial</b>: There will be a volume pricing</li>
+                    <li><b>Enterprise</b>: Volume pricing on steroids, premium support, weigh in on feature requests</li>
+                  </ul>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                  <div class="diagonal-lines"><mark>Is Logga opensource?</mark></div>
+              <h4 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <div class="diagonal-lines">Will there be a public roadmap?</div>
                 </button>
-              </h2>
+              </h4>
               <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                    Yes, on <a target="_blank" href="https://github.com/logga-app/logga-public">Github</a>! Feel free to <a href="https://github.com/logga-app/logga-public/issues/new" target="_blank">suggest additional features or report bugs</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <div class="diagonal-lines">Is logga open source?</div>
+                </button>
+              </h4>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   Not right now, but that might change with time.
                 </div>
@@ -261,28 +453,39 @@ type=EXECVE msg=audit<span class="text-purple">(</span><span class="text-blue">1
             </div>
           </div>
         </div>
-        <div class="container-fluid divider">
-          <div class="lines">
-            ▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌
-          </div>
-        </div>
-        <div class="container-fluid impressum">
-          <div class="row">
-            <div class="col-6 col-sm-6 message">
-              <mark>STOP BY</mark>
-            </div>
-            <div class="col-6 col-sm-6">
-              <ul class="nav justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="mailto:peter@getlogga.com">MAIL</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="https://github.com/logga-app/logga-public">GITHUB</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="row mt-5">
+          <nav class="navbar">
+            <a class="navbar-brand">
+              🇪🇺 2024 Peter HN. All rights reserved.
+            </a>
+            <ul class="nav d-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="./privacy.html">
+                  privacy
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./eula.html">
+                  eula
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mailto:peter@getlogga.com">
+                  <i class="bi bi-envelope-fill"></i>
+                  mail
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://github.com/logga-app/logga-public">
+                  <i class="bi bi-github"></i>
+                  github
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  </body>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
 </html>
