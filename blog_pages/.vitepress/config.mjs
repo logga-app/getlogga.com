@@ -6,9 +6,6 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://getlogga.com/blog',
   },
-  rewrites: {
-    'articles/(.*)': 'blog/articles/(.*)',
-  },
   cleanUrls: true,
   transformHead: ({ pageData }) => {
     const head = []
