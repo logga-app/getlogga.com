@@ -7,7 +7,6 @@ export default defineConfig({
   },
   rewrites: {
     'articles/(.*)': 'blog/articles/(.*)',
-    'assets/(.*)': 'blog/assets/(.*)'
   },
   cleanUrls: true,
   transformHead: ({ pageData }) => {
