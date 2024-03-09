@@ -5,7 +5,7 @@
     "scripts": {
       "dev": "vitepress dev blog_pages",
       "build": "vitepress build blog_pages && npm run copy:favicon && npm run copy:logo",
-      "release": "npm run build && cp -R blog_pages/.vitepress/dist/ blog/ && cp -R blog/assets/ assets/ && rm -rf blog/assets/ && cp blog/hashmap.json hashmap.json",
+      "release": "npm run build && cp -R blog_pages/.vitepress/dist/ blog/",
       "preview": "vitepress preview blog_pages",
       "copy:favicon": "cp blog_pages/assets/favicon.ico blog_pages/.vitepress/dist/assets/favicon.ico",
       "copy:logo": "cp blog_pages/assets/logo.png blog_pages/.vitepress/dist/assets/logo.png"
