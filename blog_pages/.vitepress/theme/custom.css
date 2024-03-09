@@ -1,0 +1,26 @@
+:root {
+    --vp-c-brand: rgb(0, 125, 255);
+    --vp-c-brand-light: rgb(0, 125, 255);
+    --vp-c-brand-lighter: rgb(0, 150, 255);
+    --vp-c-brand-dark: rgb(0, 100, 255);
+    --vp-c-brand-darker: rgb(0, 75, 255);
+
+    --vp-c-sponsor: blue;
+}
+
+.post {
+    
+}
+
+a.post{
+    text-decoration: none;
+    color: white;
+}
+
+a.post:hover{
+    color: white;
+}
+
+.post p {
+    color:#989696;
+}

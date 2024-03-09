@@ -1,1 +1,4 @@
 .DS_Store
+node_modules
+blog_pages/.vitepress/cache
+blog_pages/.vitepress/dist
