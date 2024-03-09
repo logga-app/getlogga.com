@@ -5,6 +5,10 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://getlogga.com/blog',
   },
+  rewrites: {
+    'articles/(.*)': 'blog/articles/(.*)',
+    'assets/(.*)': 'blog/assets/(.*)'
+  },
   cleanUrls: true,
   transformHead: ({ pageData }) => {
     const head = []
