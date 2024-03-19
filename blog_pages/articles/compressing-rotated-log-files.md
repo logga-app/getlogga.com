@@ -7,7 +7,7 @@ description: Learn how logga saves disk space by compressing rotated log files.
 # :sparkles: New feature: Compressing rotated log files
 
 One requested feature for logga was to compress rotated log files to save disk space. Well, we have good news: version [1.1.1](
-logga-client-1.1.1.pkg) brings you log compression!
+https://storage.getlogga.com/logga-client-1.1.1.pkg) brings you log compression!
 
 To start to use the feature, add the `compressArchives: true` to the `config.yaml` configuration file, or update your [MDM Configuration Profile](https://docs.getlogga.com/usage/configuration#configuration-with-custom-mdm-configuration-profile).
 
