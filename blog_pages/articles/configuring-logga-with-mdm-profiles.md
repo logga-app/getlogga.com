@@ -19,6 +19,6 @@ With MDM, system administrators and organizations can benefit from a "hands-free
 4. Run `/Applications/logga.app/Contents/MacOS/logga load` to load the Extension, and start to collecting **audit** and **access** logs
 
 ## Democratizing audit logging
-Be a small team with a few MacBooks, or a huge corporation with huge macOS fleet, we belive you can massively benefit from using MDM. That is why we don't want to charge extra for "enterprise" features. 
+Be a small team with a few MacBooks, or a big corporation with huge macOS fleet, we belive you can massively benefit from using MDM. That is why we don't want to charge extra for "enterprise" features. 
 
 See more details on how logga can be deployed and configured using MDM in the [documentation](https://docs.getlogga.com/building-blocks/full-disk-access). If you need help with setting up logga, <a href="mailto:peter@getlogga.com">contact support</a> or open an issue on <a href="https://github.com/logga-app/logga-public/issues/new">Github</a>.

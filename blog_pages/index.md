@@ -6,6 +6,12 @@ description: A combination of our changelog, marketing content and other posts, 
 
 # Posts
 
+<a href="/blog/articles/compressing-rotated-log-files" class="post">
+    <h2>✨ New feature: Compressing rotated log files</h2>
+    <small>March 19, 2024</small>
+    <p>Learn how logga saves disk space by compressing rotated log files.</p>
+</a>
+
 <a href="/blog/articles/configuring-logga-with-mdm-profiles" class="post">
     <h2>Corporate macOS audit logging with MDM</h2>
     <small>March 8, 2024</small>
