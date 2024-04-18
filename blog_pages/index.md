@@ -6,6 +6,12 @@ description: A combination of our changelog, marketing content and other posts, 
 
 # Posts
 
+<a href="/blog/articles/endpoint-security-vulnerabilities-and-bugs" class="post">
+    <h2>🔒 Endpoint Security vulnerabilities and bugs</h2>
+    <small>April 17, 2024</small>
+    <p>A list of macOS vulnerabilities and bugs found while working on logga.</p>
+</a>
+
 <a href="/blog/articles/compressing-rotated-log-files" class="post">
     <h2>✨ New feature: Compressing rotated log files</h2>
     <small>March 19, 2024</small>
