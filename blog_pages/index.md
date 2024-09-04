@@ -6,6 +6,12 @@ description: A combination of our changelog, marketing content and other posts, 
 
 # Posts
 
+<a href="/blog/articles/logga-switches-to-lzfse-compression" class="post">
+    <h2>🗜️ logga switches to lzfse compression</h2>
+    <small>September 04, 2024</small>
+    <p>logga now achives better compression ratio with less resources</p>
+</a>
+
 <a href="/blog/articles/endpoint-security-vulnerabilities-and-bugs" class="post">
     <h2>🔒 Endpoint Security vulnerabilities and bugs</h2>
     <small>April 17, 2024</small>

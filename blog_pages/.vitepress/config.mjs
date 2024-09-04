@@ -24,7 +24,7 @@ export default defineConfig({
     ['meta', { property: 'twitter:card', content: 'summary' }],
     ['link', { rel: 'canonical', href: 'https://getlogga.com/blog' }],
     ['meta', { name: 'keywords', content: 'audit log, access log, macOS, system extension, security blog, log forwarding, mac audit log, macos audit logs' }],
-    ['meta', { name: 'author', content: 'Peter Hasko-Nagy' }],
+    ['meta', { name: 'author', content: 'audit logging corporation' }],
     ['meta', { name: 'robots', content: 'index, archive, follow' }],
     ['meta', { name: 'googlebot', content: 'index, follow' }],
     ['meta', { property: 'og:site_name', content: 'logga' }],
